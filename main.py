@@ -22,25 +22,7 @@ from openpyxl import Workbook
 from openpyxl.utils.datetime import to_excel
 
 from config import BOT_TOKEN, DATABASE_URL, TIMEZONE_STR, DEBUG, MAX_CUSTOM_DAYS, ADMIN_USERS
-# Ініціалізуємо git (якщо ще не ініціалізовано)
 
-
-
-# Додаємо всі файли проекту
-
-
-
-# Робимо перший коміт
-
-git commit -m "Initial commit: повний код бота з PostgreSQL"
-
-# Підключаємо віддалений репозиторій (заміни URL на свій!)
-
-git remote add origin https://github.com/Oxyfiwuf/TeaBot.git
-
-# Пушимо код на GitHub
-
-git push -u origin main
 
 # Часовий пояс
 try:
