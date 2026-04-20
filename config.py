@@ -13,12 +13,16 @@ if not os.getenv("RAILWAY_ENVIRONMENT"):
 # ------------------ ОБОВ'ЯЗКОВІ ЗМІННІ ------------------
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 DATABASE_URL = os.getenv("DATABASE_URL")
+ADMIN_USERS = os.getenv("ADMIN_USERS")
 
 if not BOT_TOKEN:
     raise ValueError("⚠️ BOT_TOKEN не знайдено! Встанови в .env або в змінних Railway.")
 
 if not DATABASE_URL:
     raise ValueError("⚠️ DATABASE_URL не знайдено! Встанови в .env або в змінних Railway.")
+
+if not ADMIN_USERS:
+    raise ValueError("⚠️ ADMIN_USERS не знайдено! Встанови в .env або в змінних Railway.")
 
 # ------------------ ДОДАТКОВІ НАЛАШТУВАННЯ ------------------
 # Часовий пояс (можна змінити, якщо потрібно)
@@ -29,6 +33,3 @@ DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "yes")
 
 # Максимальна кількість днів для "останні N днів" (захист від надто великих запитів)
 MAX_CUSTOM_DAYS = int(os.getenv("MAX_CUSTOM_DAYS", "730"))  # ~2 роки
-
-# Список адмінів — користувачі, які можуть використовувати /a
-ADMIN_USERS = {663289676}  # ← заміни на свій Telegram user_id (можна додати кілька через кому)
