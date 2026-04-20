@@ -13,7 +13,7 @@ if not os.getenv("RAILWAY_ENVIRONMENT"):
 # ------------------ ОБОВ'ЯЗКОВІ ЗМІННІ ------------------
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 DATABASE_URL = os.getenv("DATABASE_URL")
-ADMIN_USERS = os.getenv("ADMIN_USERS")
+ADMIN_USERS = os.getenv("ADMIN_USERS","")
 
 if not BOT_TOKEN:
     raise ValueError("⚠️ BOT_TOKEN не знайдено! Встанови в .env або в змінних Railway.")
